@@ -1,0 +1,10 @@
+/* pages/viewed/viewed.wxss */
+@import '/pages/index/index.wxss';
+.v-title{
+    padding-top: 10rpx;
+    padding-bottom: 10rpx;
+    font-weight: bolder;
+    text-align: center;
+    border: rgb(238, 237, 238) solid 2px;
+    background-color: whitesmoke;
+}

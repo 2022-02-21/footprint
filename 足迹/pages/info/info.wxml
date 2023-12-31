@@ -1,0 +1,22 @@
+<!--pages/info/info.wxml-->
+<view class="info">
+  <!-- 头像 -->
+  <view>
+    <view class="fl">头像</view>
+    <view class="rl">
+      <image src="{{imgUrl}}" mode="aspectFill" bindtap="changeAvatar"></image>
+      <image class="arrow" src="/images/arrow.png"></image>
+    </view>
+  </view>
+  <!-- 昵称 -->
+  <view>
+    <view class="fl">昵称</view>
+    <view class="rl">{{nickname}}<view class="arrow"></view></view>
+  </view>
+  <!-- 性别 -->
+  <view>
+    <view class="fl">注册账号</view>
+    <view class="rl">{{phone}}<view class="arrow"></view></view>
+  </view>
+  <button bindtap="jump" type="primary" style="margin-top: 40rpx;">修改资料</button>
+</view>

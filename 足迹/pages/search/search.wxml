@@ -1,0 +1,77 @@
+<!--pages/search/search.wxml-->
+<!-- 搜索框 -->
+<view class="s-nav">
+  <!-- 根据景点关键字查找 -->
+  <view class="s-search">
+    <image src="/images/搜索_o.png" bindtap="search"></image>
+    <input type="text" bindinput="input" placeholder="搜索" />
+  </view>
+  <view class="s-addr">
+    <picker mode="region">
+      <view class="s-addr-img">
+        <image src="/images/地址.png"></image>
+      </view>
+    </picker>
+    <view class="s-addr-img" bindtap="category">
+        <image src="/images/民族风-筛选.png"></image>
+      </view>
+  </view>
+  <view>
+
+  </view>
+  <!-- 根据省，市，区查找
+    <label class="s-picker">
+        <picker mode="region"> 
+          <view class="s-picker-view">
+            <view class="s-picker-img">
+              <image src="/images/地址.png"></image>
+            </view>
+            <view class="s-picker-addr">
+              <view>省</view>
+              <view>市</view>
+              <view>区</view>
+            </view>
+          </view>
+        </picker>
+    </label> -->
+</view>
+
+<!-- 展示区 -->
+<view class="s-content">
+  <view class="s-content-left" wx:if="{{category}}">
+    <view>
+      历史遗迹
+    </view>
+    <view>
+      自然风光
+    </view>
+    <view>
+      人文景区
+    </view>
+    <view>
+      星级景区
+    </view>
+  </view>
+  <view class="s-content-right">
+    <scroll-view scroll-y="true" style="height: 960rpx">
+      <view class="i-spots" wx:for="{{spots}}" wx:key="index">
+        <view class="i-spot-detail" bindtap="detail" data-name="{{item.name}}">
+          <image src="/images/查看详情.png"></image>
+        </view>
+        <view class="i-spot" data-index="{{index}}" style="left:{{item.offsetX}}rpx" bindtouchstart="touchStart" catchtouchmove="touchMove" bindtouchend="touchEnd">
+          <view class="i-spot-img">
+            <image src="{{item.picList.length > 0 ? item.picList[1].picUrl : '/images/6.jpg'}} "></image>
+          </view>
+          <view class="i-spot-content" style="background-color: whitesmoke;" >
+            <view class="i-spot-name" style="flex: 2; font-weight: lighter; font-size: large; border: white;"> 
+              {{item.name}}
+            </view>
+            <view class="i-spot-addr" style="border-top: white; background-color: white; padding-top: 15rpx;">
+              {{item.proName}}-{{item.cityName}}
+            </view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

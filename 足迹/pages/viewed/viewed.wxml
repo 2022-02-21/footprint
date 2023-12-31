@@ -1,0 +1,25 @@
+<!--pages/viewed/viewed.wxml-->
+<view class="v-title">
+    浏览历史
+</view>
+
+<scroll-view scroll-y="true" style="height: 960rpx">
+    <view class="i-spots" wx:for="{{viewed}}" wx:key="index">
+        <view class="i-spot-detail" bindtap="detail" data-name="{{item.name}}">
+            <image src="/images/查看详情.png"></image>
+        </view>
+        <view class="i-spot" data-index="{{index}}" style="left:{{item.offsetX}}rpx" bindtouchstart="touchStart" catchtouchmove="touchMove" bindtouchend="touchEnd">
+            <view class="i-spot-img">
+                <image src="{{item.picList.length > 0 ? item.picList[1].picUrl : '/images/6.jpg'}} "></image>
+            </view>
+            <view class="i-spot-content" style="background-color: whitesmoke;">
+                <view class="i-spot-name" style="flex: 2; font-weight: lighter; font-size: large; border: white;">
+                    {{item.name}}
+                </view>
+                <view class="i-spot-addr" style="border-top: white; background-color: white; padding-top: 15rpx;">
+                    {{item.proName}}-{{item.cityName}}
+                </view>
+            </view>
+        </view>
+    </view>
+</scroll-view>

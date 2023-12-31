@@ -1,0 +1,23 @@
+/* pages/lookpwd/lookpwd.wxss */
+.content{
+    padding-top: 20rpx;
+}
+.l-pwd{
+    padding-top: 10rpx;
+    padding-bottom: 10rpx;
+    margin-bottom: 20rpx;
+    font-size: x-large;
+    font-weight: lighter;
+    text-align: center;
+    background-color: seashell;
+
+}
+input{
+    margin-top: 10rpx;
+    margin-bottom: 30rpx;
+    font-size: 40rpx;
+    height: 80rpx;
+    border: snow solid 2px;
+    border-radius: 5rpx;
+    background-color: whitesmoke;
+}

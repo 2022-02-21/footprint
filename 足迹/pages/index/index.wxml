@@ -1,0 +1,84 @@
+<!--index.wxml-->
+<view class="i-nav-bk"></view>
+<!-- 轮播图 -->
+<swiper class="i-swiper" indicator-dots="true" indicator-color="white" indicator-active-color="#57ad0a" autoplay="true">
+  <swiper-item>
+    <image src="../../images/1.jpg"></image>
+  </swiper-item>
+  <swiper-item>
+    <image src="../../images/2.jpg"></image>
+  </swiper-item>
+  <swiper-item>
+    <image src="../../images/3.jpg"></image>
+  </swiper-item>
+  <swiper-item>
+    <image src="../../images/4.jpg"></image>
+  </swiper-item>
+  <swiper-item>
+    <image src="../../images/5.jpg"></image>
+  </swiper-item>
+  <swiper-item>
+    <image src="../../images/6.jpg"></image>
+  </swiper-item>
+</swiper>
+<!-- 广告区 -->
+<view class="i-adver">
+  <image src="/images/font1.png"></image>
+</view>
+<view class="i-img">
+  <view class="i-img-title">
+    <text>JOURNEY 旅行</text>
+  </view>
+  <view class="i-img-img">
+    <view class="i-img-one">
+      <image src="/images/lx1.jpg"></image>
+      <view bindtap="search">
+        雪山探索
+        <image src="/images/进入箭头.png"></image>
+      </view>
+    </view>
+    <view class="i-img-two">
+      <view>
+        <image src="/images/lx2.jpg"></image>
+      </view>
+      <view>
+        <image src="/images/lx.jpg"></image>
+      </view>
+    </view>
+  </view>
+</view>
+<!--  景点推荐-->
+<view class="i-recommend">
+  <view class="i-title">
+    <text>旅游胜地</text>
+  </view>
+
+  <view class="i-content">
+    <!-- <scroll-view scroll-y="true" style="height: 630rpx"> -->
+      <view class="i-spots" wx:for="{{spots}}" wx:key="index">
+        <view class="i-spot-detail">
+          <image src="/images/查看详情.png" bindtap="detail"></image>
+        </view>
+        <view class="i-spot" data-index="{{index}}" style="left:{{item.offsetX}}rpx" bindtouchstart="touchStart" catchtouchmove="touchMove" bindtouchend="touchEnd">
+          <view class="i-spot-img">
+            <image src="{{item.picList.length > 0 ? item.picList[1].picUrl : '/images/6.jpg'}} "></image>
+          </view>
+          <view class="i-spot-content">
+            <view class="i-spot-name">
+              {{item.name}}
+            </view>
+            <view class="i-spot-summary">
+              <scroll-view scroll-y="true" style="height: 120rpx;">
+                {{item.summary}}
+              </scroll-view>
+
+            </view>
+            <view class="i-spot-addr">
+              {{item.proName}}{{item.cityName}}{{item.areaName}}
+            </view>
+          </view>
+        </view>
+      </view>
+    <!-- </scroll-view> -->
+  </view>
+</view>

@@ -1,0 +1,68 @@
+<scroll-view scroll-y="true" style="height: 820rpx;">
+  <!-- 轮播图 -->
+  <view class="io-swiper">
+    <swiper autoplay="true">
+      <swiper-item wx:for="{{spot.picList}}" wx:key="*this">
+        <image src="{{item.picUrl}}"></image>
+      </swiper-item>
+    </swiper>
+
+  </view>
+  <!-- 地址 -->
+  <view class="io-addr">
+    <image src="/images/地址.png"></image>
+    {{spot.address}}
+  </view>
+  <!-- 景点简述 -->
+  <view class="io-summary">
+    {{spot.summary}}
+  </view>
+  <!-- 门票列表 -->
+  <view class="io-priceList">
+    <view class="io-p-title">
+      门票
+    </view>
+    <view class="io-price">
+      <text wx:if="{{spot.priceList.length == 0}}">
+        无详细信息
+      </text>
+      <view wx:else="">
+        <text wx:for="{{spot.priceList}}">
+          {{item.type}}
+          票名:{{item.entityList[0].TicketName}}
+          价格: {{item.entityList[0].Amount}}￥
+          结束时间: {{item.entityList[0].EndDate}}
+          开始时间: {{item.entityList[0].BeginDate}}
+        </text>
+      </view>
+    </view>
+  </view>
+  <!-- 优惠 -->
+  <view class="io-p-title">
+    优惠
+  </view>
+  <view class="io-coupon">
+    <text>
+      {{spot.coupon}}
+    </text>
+  </view>
+  <!-- 注意事项 -->
+  <view class="io-p-title">
+    注意事项
+  </view>
+  <view class="io-attention">
+    <text>
+      {{spot.attention}}
+    </text>
+  </view>
+  <view class="io-opentime">
+    开放时间： {{spot.opentime}}
+  </view>
+  <!-- 具体内容 -->
+  <view class="io-content-title">
+    景点介绍：
+  </view>
+  <view class="io-content">
+    {{spot.content}}
+  </view>
+</scroll-view>

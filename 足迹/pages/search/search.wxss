@@ -1,0 +1,107 @@
+/* pages/search/search.wxss */
+@import '/pages/index/index.wxss';
+.s-nav{
+    display: flex;
+    background-color: rgb(243, 241, 241);
+    padding-top: 15rpx;
+    margin-left: 5rpx;
+    margin-right: 5rpx;
+    border-radius: 8rpx;
+}
+.s-search{
+    height: 60rpx;
+    line-height: 28px;
+    flex: 6;
+    display: flex;
+    margin-left: 70rpx;
+    margin-right: 35rpx;
+    border: rgb(0, 0, 0) solid 2px;
+    border-radius: 20px;
+}
+.s-search image{
+    width: 15px;
+  height: 15px;
+  align-self: center;
+  margin: 0 10px;
+} 
+.s-search input{
+    width: 60%; 
+    font-size: 12px;
+    font-family: "微软雅黑";   
+}
+.s-addr{
+  display: flex;
+  flex: 2;
+  margin: 10rpx;
+}
+.s-addr .s-addr-img{
+  flex: 1;
+}
+.s-addr-img image{
+  margin: auto;
+  width: 70rpx;
+  height: 55rpx;
+}
+
+
+
+.s-picker{
+    /* margin: 2px 8px 6px 8px; */
+}
+
+
+.s-picker picker{
+    margin-top: 8rpx;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding: 2px;
+    border-bottom: black solid 1px;
+    border-radius: 15px;
+}
+.s-picker-view{
+  display: flex;
+}
+.s-picker-img{
+  flex: 1;
+  text-align: center;
+}
+.s-picker-img image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.s-picker-addr{
+  display: flex;
+  flex: 9;
+}
+.s-picker-addr view{
+  flex: 1;
+  text-align: center;
+}
+.s-content{
+    display: flex;
+    height: 960rpx;
+    flex-direction: row;
+    margin: 8rpx;
+    border: rgb(216, 216, 214) 1px solid;
+    border-radius: 10rpx;
+    background-color: #fff;
+}
+.s-content-left{
+    flex: 1;
+    height: 100%;
+    background-color: rgb(240, 243, 241);
+    border-radius: 10rpx;
+}
+.s-content-left view{
+  padding: 4rpx;
+  padding-top: 8rpx;
+  padding-bottom: 8rpx;
+  border: whitesmoke solid 2px;
+  border-radius: 5rpx;
+  background-color: white;
+}
+.s-content-right{
+    flex:3;
+    height: 100%;
+    border-radius: 10rpx;
+}

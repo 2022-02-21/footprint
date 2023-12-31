@@ -1,0 +1,31 @@
+<!--pages/me/me.wxml-->
+<!--pages/person/person.wxml-->
+<view class="avatar" bindtap="login">
+  <image wx:if="{{user == ''}}" src="/images/个人中心.png" mode="aspectFill"></image>
+  <image wx:else="" src="/images/5.jpg" mode="aspectFill"></image>
+</view>
+<view class="content">
+  <view>
+    <image src="/images/心愿单.png"></image>
+    <view>向往</view>
+  </view>
+  <view>
+    <image src="/images/足迹.png"></image>
+    <view>足迹</view>
+  </view>
+  <view  bindtap="viewed">
+    <image src="/images/浏览记录.png"></image>
+    <view>浏览记录</view>
+  </view>
+</view>
+<view class="menu">
+  <view bindtap="info">个人资料
+    <image class="arrow" src="/images/arrow.png"></image>
+  </view>
+  <view>使用指南
+    <image class="arrow" src="/images/arrow.png"></image>
+  </view>
+  <view bindtap="quit">退出登录
+    <image class="arrow" src="/images/arrow.png"></image>
+  </view>
+</view>

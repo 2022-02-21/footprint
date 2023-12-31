@@ -1,0 +1,36 @@
+<!--pages/lookpwd/lookpwd.wxml-->
+<!--pages/forgotpwd/forgotpwd.wxml-->
+<!-- <text>pages/forgotpwd/forgotpwd.wxml</text> -->
+<view class='content'>
+  <form bindsubmit='submit_email' wx:if="{{form_index ==0}}">
+    <view class="l-pwd">忘记密码？</view>
+    <view class="sections">
+      <input name="phone" type='number' placeholder-class='small'  placeholder='请输入手机号' />
+    </view>
+    <view class="sections">
+      <input name="nickname" placeholder-class='small' placeholder='请输入昵称' />
+    </view>
+      <button type='primary' placeholder-class='small' formType="submit" >下一步</button>
+  </form>
+ 
+  <form bindsubmit='submit_password' wx:else>
+    <label>找回密码：第二步</label>
+    <view class="section">
+      <view class="left">
+        <input name="pwd" password="{{mask}}" placeholder-class='small' placeholder='输入新密码' />
+      </view>
+      <view class="right">
+        <switch   bindchange="switchChange"/>
+      </view>
+    </view>
+    <view class="section">
+      <view class="left">
+        <input name="validcode" type='number'  placeholder-class='small' placeholder='输入邮件中的验证码'/>
+      </view>
+      <view class="right">
+          <text style="color:#aaa">剩余：{{second}}秒</text>
+      </view>
+    </view>
+      <button type='primary' placeholder-class='small' formType="submit" disabled="{{disabled}}">提交</button>
+  </form>
+</view>

@@ -1,0 +1,68 @@
+/* pages/me/me.wxss */
+
+page {
+    background-color: #f4f4f4;
+    font-size: 32rpx;
+    background-image: url(https://cdn.pixabay.com/photo/2020/11/26/06/43/lake-5778070__480.jpg);
+  }
+  .avatar {
+    width: 100%;
+   
+    height: 400rpx;
+    /* 水平垂直居中 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .avatar > image {
+    width: 200rpx;
+    height: 200rpx;
+    border-radius: 50%;
+    border: 10rpx solid rgb(0, 0, 0);
+  }
+  
+  .content {
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 65rpx 0;
+  }
+  
+  .content > view {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .content > view > image {
+    width: 65rpx;
+    height: 64rpx;
+  }
+  .menu {
+    padding: 20rpx;
+    height: 100%;
+    background-color: #fff;
+    margin-top: 35rpx;
+    box-sizing: border-box;
+  }
+  
+  .menu > view {
+    padding: 20rpx;
+    line-height: 60rpx;
+    border-bottom: 1px solid #efefef;
+    height: 60rpx;
+  }
+  
+  .menu > view:last-child {
+    border: none;
+  }
+  
+  .arrow {
+    width: 30rpx;
+    height: 32rpx;
+    float: right;
+    margin-top: 16rpx;
+  }
+
